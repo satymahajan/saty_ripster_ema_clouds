@@ -1,6 +1,8 @@
 # Saty_Ripster_EMA_Clouds
 # Upgraded version of Ripster's famous EMA clouds.
 # v2 By Saty Mahajan (2022)
+# Author is not responsible for your trading using this script.
+# Data provided in this script is not financial advice.
 #
 # Features:
 # The 4 EMAs Ripster commonly uses are included by default. 
