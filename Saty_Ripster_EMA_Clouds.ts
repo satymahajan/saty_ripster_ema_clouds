@@ -49,14 +49,14 @@ def TrendEMALowValue = ExpAverage(price, TrendEMALow);
 def TrendEMAHighValue = ExpAverage(price, TrendEMAHigh);
 AddCloud(if TrendOn then TrendEMALowValue else double.nan, TrendEMAHighValue, GlobalColor("Trend Bullish"), GlobalColor("Trend Bearish"));
 
-input SignalOn = no;
-input SignalEMALow = 72;
-input SignalEMAHigh = 89;
-DefineGlobalColor("Signal Bullish", Color.GRAY);
-DefineGlobalColor("Signal Bearish", Color.GRAY);
-def SignalEMALowValue = ExpAverage(price,SignalEMALow);
-def SignalEMAHighValue = ExpAverage(price,SignalEMAHigh);
-AddCloud(if SignalOn then SignalEMALowValue else double.nan, SignalEMAHighValue, GlobalColor("Signal Bullish"), GlobalColor("Signal Bullish"));
+input MidtermTrendOn = no;
+input MidtermTrendLow = 72;
+input MidtermTrendHigh = 89;
+DefineGlobalColor("Mid-term Trend Bullish", Color.GRAY);
+DefineGlobalColor("Mid-term Trend Bearish", Color.GRAY);
+def MidtermTrendEMALowValue = ExpAverage(price,MidtermTrendLow);
+def MidtermTrendEMAHighValue = ExpAverage(price,MidtermTrendHigh);
+AddCloud(if MidtermTrendOn then MidtermTrendEMALowValue else double.nan, MidtermTrendEMAHighValue, GlobalColor("Mid-term Trend Bullish"), GlobalColor("Mid-term Trend Bullish"));
 
 input LongtermTrendOn = yes;
 input LongtermTrendEMALow = 180;
