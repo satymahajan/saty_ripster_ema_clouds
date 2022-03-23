@@ -56,7 +56,7 @@ DefineGlobalColor("Mid-term Trend Bullish", Color.GRAY);
 DefineGlobalColor("Mid-term Trend Bearish", Color.GRAY);
 def MidtermTrendEMALowValue = ExpAverage(price,MidtermTrendLow);
 def MidtermTrendEMAHighValue = ExpAverage(price,MidtermTrendHigh);
-AddCloud(if MidtermTrendOn then MidtermTrendEMALowValue else double.nan, MidtermTrendEMAHighValue, GlobalColor("Mid-term Trend Bullish"), GlobalColor("Mid-term Trend Bullish"));
+AddCloud(if MidtermTrendOn then MidtermTrendEMALowValue else double.nan, MidtermTrendEMAHighValue, GlobalColor("Mid-term Trend Bullish"), GlobalColor("Mid-term Trend Bearish"));
 
 input LongtermTrendOn = yes;
 input LongtermTrendEMALow = 180;
@@ -65,4 +65,4 @@ DefineGlobalColor("Long-term Trend Bullish", Color.GRAY);
 DefineGlobalColor("Long-term Trend Bearish", Color.GRAY);
 def LongtermTrendEMALowValue = ExpAverage(price, LongtermTrendEMALow);
 def LongtermTrendEMAHighValue = ExpAverage(price, LongtermTrendEMAHigh);
-AddCloud(if LongtermTrendOn then LongtermTrendEMALowValue else double.nan, LongtermTrendEMAHighValue, GlobalColor("Long-term Trend Bullish"), GlobalColor("Long-term Trend Bullish"));
+AddCloud(if LongtermTrendOn then LongtermTrendEMALowValue else double.nan, LongtermTrendEMAHighValue, GlobalColor("Long-term Trend Bullish"), GlobalColor("Long-term Trend Bearish"));
